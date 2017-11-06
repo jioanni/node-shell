@@ -20,7 +20,13 @@ process.stdin.on('data', function (data) {
             })
             process.stdout.write("prompt > ");
           });
+    } else if (cmd === "echo") {
+            process.stdout.write(process.argv[2] + "\n");
+            process.stdout.write("prompt >");
     }
-    //  process.stdout.write('\nprompt > ');
+
+      
+    
+     
 
 });

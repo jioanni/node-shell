@@ -1,19 +1,16 @@
-var fs = require("fs");
+
 
 
 function pwd(){
   process.stdout.write(process.env.PWD);
+  process.stdout.write('\nprompt > ');
 }
 
 function date(){
   process.stdout.write(Date());
+  process.stdout.write('\nprompt > ');
 }
 
-function ls(err, files) {
-  if (err) throw err;
-  files.forEach(function(file) {
-    process.stdout.write(file.toString() +"\n");
-  })
-}
 
-module.exports = {pwd, date, ls}
+
+module.exports = {pwd, date}
