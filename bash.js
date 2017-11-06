@@ -1,5 +1,5 @@
-var commands = require('./command.js');
-var fs = require("fs");
+const commands = require('./command.js');
+const fs = require("fs");
 
 
 process.stdout.write('prompt > ');
@@ -21,7 +21,7 @@ process.stdin.on('data', function (data) {
             process.stdout.write("prompt > ");
           });
     } else if (cmd === "echo") {
-            process.stdout.write(process.argv[2] + "\n");
+            process.stdout.write(process.argv2 + "\n");
             process.stdout.write("prompt >");
     }
 
