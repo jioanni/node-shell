@@ -1,19 +1,17 @@
+var commands = require('./command.js');
+
+
 process.stdout.write('prompt > ');
-
-
 
 
 process.stdin.on('data', function (data) {
     var cmd = data.toString().trim();
 
     if (cmd === "PWD") {
-        process.stdout.write(process.env.PWD);
+        commands.pwd();
     } else if (cmd === "Date") {
-        process.stdout.write(Date());
+        commands.date();
     }
      process.stdout.write('\nprompt > ');
 
 });
-
-
-
